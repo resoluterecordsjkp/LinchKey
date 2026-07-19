@@ -1,0 +1,12 @@
+{
+  "_file": "config.json",
+  "_build": "2026-07-19 / Contest PWA v1.0.1",
+  "appName": "LinchKey",
+  "version": "1.0.1-contest",
+  "contestMode": true,
+  "supportEnabled": false,
+  "supportUrl": "",
+  "liveAuthorityEnabled": false,
+  "apiBaseUrl": "",
+  "lastUpdated": "2026-07-19"
+}

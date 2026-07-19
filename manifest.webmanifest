@@ -1,0 +1,19 @@
+{
+  "_file": "manifest.webmanifest",
+  "_build": "2026-07-19 / Contest PWA v1.0.1",
+  "name": "LinchKey",
+  "short_name": "LinchKey",
+  "description": "Source-first authority mapping and explainable reasoning.",
+  "start_url": "./",
+  "display": "standalone",
+  "background_color": "#0b0f11",
+  "theme_color": "#0b0f11",
+  "icons": [
+    {
+      "src": "icons/linchkey-logo.jpg",
+      "sizes": "512x512",
+      "type": "image/jpeg",
+      "purpose": "any"
+    }
+  ]
+}

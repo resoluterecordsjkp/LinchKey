@@ -1,0 +1,24 @@
+LINCHKEY UPLOAD CHECKLIST
+Build: 2026-07-19 / Contest PWA v1.0.1
+
+ROOT FILES
+[ ] index.html
+[ ] app.js
+[ ] styles.css
+[ ] config.json
+[ ] manifest.webmanifest
+[ ] sw.js
+[ ] README_DEPLOY.md
+[ ] DEPLOY_CHECKLIST.txt
+
+DATA FOLDER
+[ ] data/modules.json
+
+ICONS FOLDER
+[ ] icons/linchkey-logo.jpg
+
+WORKER FOLDER
+[ ] worker/worker.js
+[ ] worker/wrangler.toml
+
+DO NOT UPLOAD OLD VERSIONS WITH THE SAME NAME.

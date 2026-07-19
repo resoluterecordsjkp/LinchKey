@@ -1,0 +1,275 @@
+{
+  "_file": "data/modules.json",
+  "_build": "2026-07-19 / Contest PWA v1.0.1",
+  "federal": {
+    "id": "pkpa",
+    "name": "Federal PKPA",
+    "source": "28 U.S.C. \u00a7 1738A",
+    "status": "curated",
+    "lastVerified": "2026-07-19"
+  },
+  "states": {
+    "TX": {
+      "name": "Texas",
+      "status": "curated",
+      "lastVerified": "2026-07-19"
+    },
+    "VA": {
+      "name": "Virginia",
+      "status": "curated",
+      "lastVerified": "2026-07-19"
+    }
+  },
+  "stateRegistry": [
+    {
+      "code": "AL",
+      "name": "Alabama",
+      "status": "planned"
+    },
+    {
+      "code": "AK",
+      "name": "Alaska",
+      "status": "planned"
+    },
+    {
+      "code": "AZ",
+      "name": "Arizona",
+      "status": "planned"
+    },
+    {
+      "code": "AR",
+      "name": "Arkansas",
+      "status": "planned"
+    },
+    {
+      "code": "CA",
+      "name": "California",
+      "status": "planned"
+    },
+    {
+      "code": "CO",
+      "name": "Colorado",
+      "status": "planned"
+    },
+    {
+      "code": "CT",
+      "name": "Connecticut",
+      "status": "planned"
+    },
+    {
+      "code": "DE",
+      "name": "Delaware",
+      "status": "planned"
+    },
+    {
+      "code": "FL",
+      "name": "Florida",
+      "status": "planned"
+    },
+    {
+      "code": "GA",
+      "name": "Georgia",
+      "status": "planned"
+    },
+    {
+      "code": "HI",
+      "name": "Hawaii",
+      "status": "planned"
+    },
+    {
+      "code": "ID",
+      "name": "Idaho",
+      "status": "planned"
+    },
+    {
+      "code": "IL",
+      "name": "Illinois",
+      "status": "planned"
+    },
+    {
+      "code": "IN",
+      "name": "Indiana",
+      "status": "planned"
+    },
+    {
+      "code": "IA",
+      "name": "Iowa",
+      "status": "planned"
+    },
+    {
+      "code": "KS",
+      "name": "Kansas",
+      "status": "planned"
+    },
+    {
+      "code": "KY",
+      "name": "Kentucky",
+      "status": "planned"
+    },
+    {
+      "code": "LA",
+      "name": "Louisiana",
+      "status": "planned"
+    },
+    {
+      "code": "ME",
+      "name": "Maine",
+      "status": "planned"
+    },
+    {
+      "code": "MD",
+      "name": "Maryland",
+      "status": "planned"
+    },
+    {
+      "code": "MA",
+      "name": "Massachusetts",
+      "status": "planned"
+    },
+    {
+      "code": "MI",
+      "name": "Michigan",
+      "status": "planned"
+    },
+    {
+      "code": "MN",
+      "name": "Minnesota",
+      "status": "planned"
+    },
+    {
+      "code": "MS",
+      "name": "Mississippi",
+      "status": "planned"
+    },
+    {
+      "code": "MO",
+      "name": "Missouri",
+      "status": "planned"
+    },
+    {
+      "code": "MT",
+      "name": "Montana",
+      "status": "planned"
+    },
+    {
+      "code": "NE",
+      "name": "Nebraska",
+      "status": "planned"
+    },
+    {
+      "code": "NV",
+      "name": "Nevada",
+      "status": "planned"
+    },
+    {
+      "code": "NH",
+      "name": "New Hampshire",
+      "status": "planned"
+    },
+    {
+      "code": "NJ",
+      "name": "New Jersey",
+      "status": "planned"
+    },
+    {
+      "code": "NM",
+      "name": "New Mexico",
+      "status": "planned"
+    },
+    {
+      "code": "NY",
+      "name": "New York",
+      "status": "planned"
+    },
+    {
+      "code": "NC",
+      "name": "North Carolina",
+      "status": "planned"
+    },
+    {
+      "code": "ND",
+      "name": "North Dakota",
+      "status": "planned"
+    },
+    {
+      "code": "OH",
+      "name": "Ohio",
+      "status": "planned"
+    },
+    {
+      "code": "OK",
+      "name": "Oklahoma",
+      "status": "planned"
+    },
+    {
+      "code": "OR",
+      "name": "Oregon",
+      "status": "planned"
+    },
+    {
+      "code": "PA",
+      "name": "Pennsylvania",
+      "status": "planned"
+    },
+    {
+      "code": "RI",
+      "name": "Rhode Island",
+      "status": "planned"
+    },
+    {
+      "code": "SC",
+      "name": "South Carolina",
+      "status": "planned"
+    },
+    {
+      "code": "SD",
+      "name": "South Dakota",
+      "status": "planned"
+    },
+    {
+      "code": "TN",
+      "name": "Tennessee",
+      "status": "planned"
+    },
+    {
+      "code": "TX",
+      "name": "Texas",
+      "status": "curated"
+    },
+    {
+      "code": "UT",
+      "name": "Utah",
+      "status": "planned"
+    },
+    {
+      "code": "VT",
+      "name": "Vermont",
+      "status": "planned"
+    },
+    {
+      "code": "VA",
+      "name": "Virginia",
+      "status": "curated"
+    },
+    {
+      "code": "WA",
+      "name": "Washington",
+      "status": "planned"
+    },
+    {
+      "code": "WV",
+      "name": "West Virginia",
+      "status": "planned"
+    },
+    {
+      "code": "WI",
+      "name": "Wisconsin",
+      "status": "planned"
+    },
+    {
+      "code": "WY",
+      "name": "Wyoming",
+      "status": "planned"
+    }
+  ]
+}
