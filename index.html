@@ -1,0 +1,115 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width,initial-scale=1">
+  <meta name="theme-color" content="#0b0f11">
+  <title>LinchKey — Find What Governs</title>
+  <link rel="manifest" href="manifest.webmanifest">
+  <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+<main class="app-shell">
+<header class="brand-shell">
+  <img src="icons/linchkey-logo.jpg" alt="LinchKey — Find What Governs" class="logo">
+  <div class="rule-zero"><strong>RULE 0</strong> Never assume. Never flatten. Never simplify the governing meaning.</div>
+  <span id="modeBadge" class="badge">Contest build</span>
+</header>
+
+<nav class="top-tabs">
+  <button class="tab active" data-view="analyze">Analyze</button>
+  <button class="tab" data-view="authority">Authority library</button>
+  <button class="tab" data-view="updates">Authority updates</button>
+  <button class="tab" data-view="about">About</button>
+</nav>
+
+<section id="analyze" class="view active-view">
+  <section class="panel">
+    <h1>Describe the question</h1>
+    <p>LinchKey separates facts, loads governing authority, asks factual questions, and blocks unsupported conclusions.</p>
+    <label for="question">Question or situation</label>
+    <textarea id="question" placeholder="Example: The children have lived in Virginia for six months. Does Virginia have jurisdiction?"></textarea>
+  </section>
+
+  <section class="panel">
+    <h2>Authority path</h2>
+    <div class="grid two">
+      <label>Originating state<select id="originState"></select></label>
+      <label>Later state<select id="laterState"></select></label>
+    </div>
+    <div class="grid two">
+      <label>Prior custody or parentage order?
+        <select id="priorOrder"><option value="unknown">Unknown</option><option value="yes">Yes</option><option value="no">No</option></select>
+      </label>
+      <label>Current posture
+        <select id="posture"><option value="unknown">Unknown</option><option value="pending">Pending / nonfinal</option><option value="direct">Direct appeal / de novo review</option><option value="final">Final judgment</option><option value="collateral">Collateral challenge</option></select>
+      </label>
+    </div>
+  </section>
+
+  <section class="panel">
+    <h2>Date-controlled authority</h2>
+    <div class="grid three">
+      <label>Emergency or triggering event<input id="eventDate" type="date"></label>
+      <label>Temporary order<input id="tempDate" type="date"></label>
+      <label>Later/permanent order<input id="permanentDate" type="date"></label>
+    </div>
+    <label class="switch-line"><input id="datesUnknown" type="checkbox"> Exact dates unknown—keep date/version nodes unresolved.</label>
+  </section>
+
+  <section class="panel">
+    <h2>Individual fact questions</h2>
+    <p class="helper">Do not answer “all safeguards were met.” Answer what actually happened.</p>
+    <div id="questionGrid" class="question-grid"></div>
+  </section>
+
+  <div class="actions">
+    <button id="runAnalysis" class="primary">Build authority map</button>
+    <button id="loadDemo" class="secondary">Load contest demo facts</button>
+    <button id="resetAll" class="secondary">Reset</button>
+  </div>
+
+  <section id="resultPanel" class="panel hidden" aria-live="polite">
+    <h2>Why this conclusion?</h2>
+    <div id="resultMetrics" class="metrics"></div>
+    <div id="resultNodes" class="node-list"></div>
+    <div id="overallResult" class="overall"></div>
+    <details>
+      <summary>What would change the result?</summary>
+      <div id="changeResult" class="details-box"></div>
+    </details>
+  </section>
+</section>
+
+<section id="authority" class="view">
+  <section class="panel">
+    <h1>Authority library</h1>
+    <div id="librarySummary" class="metrics"></div>
+    <div id="stateLibrary" class="state-library"></div>
+  </section>
+</section>
+
+<section id="updates" class="view">
+  <section class="panel">
+    <h1>Authority update ledger</h1>
+    <div class="update-card">
+      <span class="badge plum">Example update</span>
+      <h2>Texas emergency-jurisdiction interpretation</h2>
+      <p><strong>New authority:</strong> <em>In re K.N.</em>, issued June 5, 2026.</p>
+      <p><strong>Possible effect:</strong> Changes one preservation/classification branch.</p>
+      <p><strong>Does not cure:</strong> emergency facts, duration, communication, service, Texas-side process, Virginia modification authority, or PKPA compliance.</p>
+    </div>
+  </section>
+</section>
+
+<section id="about" class="view">
+  <section class="panel">
+    <h1>About this build</h1>
+    <p>This free contest build uses curated federal, Texas, and Virginia modules. The same app can later grow into a fifty-state attorney library and live authority-retrieval system.</p>
+    <div id="supportArea" class="support hidden"><a id="supportLink" href="#" rel="noopener">Support LinchKey</a></div>
+  </section>
+</section>
+</main>
+<script src="app.js" defer></script>
+</body>
+</html>
