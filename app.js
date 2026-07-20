@@ -1,5 +1,3 @@
-LinchKey app.js
-Copy everything below and paste it into the GitHub file named app.js
 // LinchKey build: 2026-07-19 / Contest PWA v1.0.1
 let CONFIG=null;let MODULES=null;
 const baseQuestions=[
@@ -14,7 +12,7 @@ const baseQuestions=[
 {id:'pkpa_gate',label:'Were both federal modification gates satisfied?',code:'28 U.S.C. § 1738A(f)'}
 ];
 function stateOptions(selected){return MODULES.stateRegistry.map(s=>`<option value="${s.code}" ${s.code===selected?'selected':''}>${s.name} (${s.status})</option>`).join('')}
-function buildQuestions(){document.getElementById('questionGrid').innerHTML=baseQuestions.map(q=>`<div class="question-card"><strong>${q.label}</strong><select id="${q.id}"><option value="unknown">Unknown</option><option value="yes">Yes</option><option value="no">No</option></select><div class="helper">${q.code}</div></div>`).join('')}
+function buildQuestions(){document.getElementById('questionGrid').innerHTML=baseQuestions.map(q=>`<div class="question-card"><strong>${q.label}</strong><select id="${q.id}"><option value="unknown">Unknown</option><option value="yes">Yes</option><option value="no">No</option></select></div>`).join('')}
 function value(id){return document.getElementById(id)?.value||'unknown'}
 function makeNode(id,label,code){const v=value(id),cls=v==='yes'?'pass':v==='no'?'fail':'open';return{cls,icon:v==='yes'?'✓':v==='no'?'×':'?',label,code,status:v==='yes'?'Verified':v==='no'?'Failed':'Unresolved'}}
 function analyze(){
@@ -36,15 +34,15 @@ function analyze(){
  nodes.push({cls:(datesUnknown||dates.every(x=>!x))?'open':'pass',icon:(datesUnknown||dates.every(x=>!x))?'?':'✓',label:'Historical date/version branch',code:'Date-controlled authority',status:(datesUnknown||dates.every(x=>!x))?'Unresolved':'Verified'});
  const pass=nodes.filter(n=>n.cls==='pass').length,fail=nodes.filter(n=>n.cls==='fail').length,open=nodes.filter(n=>n.cls==='open').length;
  document.getElementById('resultMetrics').innerHTML=`<div class="metric"><span class="muted">Verified</span><strong>${pass}</strong></div><div class="metric"><span class="muted">Failed</span><strong>${fail}</strong></div><div class="metric"><span class="muted">Unresolved</span><strong>${open}</strong></div>`;
- document.getElementById('resultNodes').innerHTML=nodes.map(n=>`<div class="node ${n.cls}"><div class="icon">${n.icon}</div><div><strong>${n.label}</strong><div class="muted">${n.status}</div></div><div class="code">${n.code}</div></div>`).join('');
+ document.getElementById('resultNodes').innerHTML=nodes.map(n=>`<div class="node ${n.cls}"><div class="icon">${n.icon}</div><div><strong>${n.label}</strong><div class="muted">${n.status}</div><div class="code">${n.code}</div></div></div>`).join('');
  const required=['origin_docket','origin_service','origin_hearing','loss_decline','later_verify','long_term_path','pkpa_gate'];
  const allYes=required.every(id=>value(id)==='yes');
  const anyNo=required.some(id=>value(id)==='no');
  let head='UNRESOLVED',explain='The current record does not establish every mandatory gate. Unknown facts remain unknown.';
- if(allYes&&prior==='yes'){head='Authority path provisionally established';explain='Every displayed mandatory gate is verified, subject to source-version, contradiction, exception, and evidence checks.'}
+ if(allYes&&prior==='yes'){head='Authority path provisionally established';explain='Every displayed mandatory gate is verified, subject to source-version, contradiction, exception, and evidence challenges.'}
  else if(anyNo){head='FAILED / NOT ESTABLISHED';explain='The modification chain is conjunctive. One failed mandatory gate prevents the whole structure from being treated as satisfied.'}
  document.getElementById('overallResult').innerHTML=`<strong>${head}</strong><p>${explain}</p>`;
- document.getElementById('changeResult').innerHTML=`<p>Resolve failed or unknown nodes with the actual ${origin} and ${later} dockets, orders, service returns, hearing records, communication record, legal-parent authorities, dates, findings, and a separately valid long-term path.</p>`;
+ document.getElementById('changeResult').innerHTML=`<p>Resolve failed or unknown nodes with the actual ${origin} and ${later} dockets, orders, service returns, hearing records, communication records, and jurisdictional affidavits.</p>`;
  document.getElementById('resultPanel').classList.remove('hidden');
  document.getElementById('resultPanel').scrollIntoView({behavior:'smooth'});
 }
@@ -66,7 +64,7 @@ function resetAll(){
 }
 function renderLibrary(){
  const curated=MODULES.stateRegistry.filter(s=>s.status==='curated').length;
- document.getElementById('librarySummary').innerHTML=`<div class="metric"><span class="muted">Federal modules</span><strong>1</strong></div><div class="metric"><span class="muted">Curated states</span><strong>${curated}</strong></div><div class="metric"><span class="muted">Planned states</span><strong>${50-curated}</strong></div>`;
+ document.getElementById('librarySummary').innerHTML=`<div class="metric"><span class="muted">Federal modules</span><strong>1</strong></div><div class="metric"><span class="muted">Curated states</span><strong>${curated}</strong></div><div class="metric"><span class="muted">Sample states</span><strong>${MODULES.stateRegistry.length-curated-1}</strong></div>`;
  document.getElementById('stateLibrary').innerHTML=MODULES.stateRegistry.map(s=>`<div class="state-item ${s.status}"><strong>${s.name}</strong><div class="muted">${s.code} • ${s.status}</div></div>`).join('');
 }
 async function init(){
@@ -82,4 +80,3 @@ async function init(){
  if('serviceWorker'in navigator) navigator.serviceWorker.register('sw.js').catch(()=>{});
 }
 init();
-
