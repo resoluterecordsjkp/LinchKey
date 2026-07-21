@@ -93,11 +93,12 @@ They helped with:
 - improving the mobile interface;
 - and helping translate my nonlinear reasoning into a structure other people can inspect and understand.
 
-The process was iterative.
+The process was iterative. Most of this work was completed through one continuous, human-directed ChatGPT conversation using GPT-5.6 and Codex. I worked primarily through the Android app, manually moving the output between Microsoft Word, HTML, CSS, JavaScript, and GitHub while reviewing, correcting, testing, and refining each revision. The complete original ChatGPT conversation and its code-update history have been retained by the author.
 
 When generated code or language merged separate issues, omitted a required step, or replaced an exact distinction with a smoother but less accurate summary, I corrected it and the prototype was revised.
 
 GPT-5.6 and Codex accelerated the translation, implementation, debugging, and documentation process. The governing meaning, architecture, corrections, and final design decisions remained source-controlled and directed by me.
+
 
 # The LinchKey Constitution
 
