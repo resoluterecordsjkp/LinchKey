@@ -72,6 +72,33 @@ It is designed to help users understand why a conclusion is supported, unsupport
 > **Then explain why the conclusion follows—or why it does not.**
 > ---
 
+---
+
+# How GPT-5.6 and Codex Were Used
+
+I developed the LinchKey reasoning architecture, source-first methodology, governing-pathway model, correction safeguards, and reanalysis process.
+
+I used GPT-5.6 and Codex to help translate that architecture into a working interactive HTML prototype.
+
+They helped with:
+
+- turning the reasoning structure into HTML, CSS, and JavaScript;
+- building the interactive question flow;
+- preserving child-specific and date-controlled pathways;
+- separating verified, failed, and unresolved elements;
+- creating the Why and explainability sections;
+- revising code and wording when required distinctions were flattened;
+- debugging GitHub Pages deployment;
+- resolving service-worker caching problems;
+- improving the mobile interface;
+- and helping translate my nonlinear reasoning into a structure other people can inspect and understand.
+
+The process was iterative.
+
+When generated code or language merged separate issues, omitted a required step, or replaced an exact distinction with a smoother but less accurate summary, I corrected it and the prototype was revised.
+
+GPT-5.6 and Codex accelerated the translation, implementation, debugging, and documentation process. The governing meaning, architecture, corrections, and final design decisions remained source-controlled and directed by me.
+
 # The LinchKey Constitution
 
 The following principles govern every module, every reasoning pathway, every authority library, and every future implementation of LinchKey.
